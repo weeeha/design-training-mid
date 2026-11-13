@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="shot-height" content="820">
+<title>Редактор из узлов: как сейчас выглядит ошибка</title>
+<link rel="stylesheet" href="legacy.css">
+<style>
+  /* unslop-waive EFF-2 · the radial-gradient draws the 20px dot grid of a node canvas, not a control or text fill · node editors use this grid to show the snap spacing */
+  .canvas { position:relative; height:700px; background-color:#f4f5f7; background-image: radial-gradient(#c8ced5 1px, transparent 1px); background-size: 20px 20px; }
+  .node { position:absolute; width:220px; background:#fff; border:1px solid #9aa4ae; border-radius:3px; font-size:12px; }
+  .node .h { padding:6px 10px; border-bottom:1px solid #c8ced5; font-weight:bold; font-size:13px; background:#f1f3f5; }
+  .node .b { padding:8px 10px; color:#5c6670; min-height:46px; }
+  .node.bad { border:2px solid #b3261e; }
+  .node.bad .h { background:#fbe9e7; color:#8c1d14; }
+  .thumb { height:70px; background:#9aa4ae; color:#fff; display:flex; align-items:center; justify-content:center; border-radius:2px; }
+  .h-in, .h-out { position:absolute; width:10px; height:10px; border-radius:50%; border:1px solid #5c6670; background:#fff; top:40px; }
+  .h-in { left:-6px; } .h-out { right:-6px; }
+  svg { position:absolute; inset:0; }
+  .toolbar { position:absolute; left:50%; bottom:20px; transform:translateX(-50%); background:#fff; border:1px solid #c8ced5; border-radius:3px; padding:8px; display:flex; gap:8px; }
+  .toast { position:absolute; right:20px; top:20px; width:300px; }
+</style></head>
+<body>
+<div class="top"><span class="logo">Конвейер</span><nav><span class="on">Мой поток: трейлер</span></nav><span class="right">Сохранено</span></div>
+<div class="canvas">
+  <svg width="1440" height="700"><g fill="none" stroke="#5c6670" stroke-width="1.5">
+    <path d="M286 190 C340 190 340 190 396 190"/>
+    <path d="M622 190 C680 190 680 260 736 260"/>
+    <path d="M286 430 C520 430 520 300 736 300"/>
+    <path d="M962 280 C1020 280 1020 280 1076 280"/>
+  </g></svg>
+  <div class="node" style="left:60px;top:150px"><div class="h">Текст</div><div class="b">Ночной город под дождём, неоновые вывески, камера медленно едет вперёд</div><span class="h-out"></span></div>
+  <div class="node" style="left:400px;top:150px"><div class="h">Картинка</div><div class="b"><div class="thumb">готово</div></div><span class="h-in"></span><span class="h-out"></span></div>
+  <div class="node" style="left:60px;top:390px"><div class="h">Озвучка</div><div class="b">«Этот город никогда не спит.» Голос: низкий мужской</div><span class="h-out"></span></div>
+  <div class="node bad" style="left:740px;top:220px"><div class="h">Видео</div><div class="b">Error<br>Request failed with status code 422</div><span class="h-in"></span><span class="h-out"></span></div>
+  <div class="node" style="left:1080px;top:240px"><div class="h">Сборка</div><div class="b">ожидание</div><span class="h-in"></span></div>
+  <div class="err toast">Запуск не удался. Проверьте узлы.</div>
+  <div class="toolbar"><span class="btn">+ Текст</span><span class="btn">+ Картинка</span><span class="btn">+ Видео</span><span class="btn">+ Озвучка</span><span class="btn">+ Сборка</span><span class="btn primary">Запустить всё</span></div>
+</div>
+<div class="training">Учебный макет, данные вымышлены</div>
+</body></html>
