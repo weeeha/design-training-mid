@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="shot-height" content="900">
+<title>Как посетитель узнаёт об экспонате сегодня</title>
+<style>
+  body { margin:0; background:#e9ecef; font-family: Arial, Helvetica, sans-serif; color:#222a33; }
+  .wrap { display:grid; grid-template-columns: repeat(3, 360px); gap: 56px; padding: 36px 70px; justify-content:center; }
+  .cap { font-size:14px; margin:0 0 12px; line-height:1.45; }
+  .cap b { display:block; font-size:16px; margin-bottom:4px; }
+  .label { background:#f6f3ec; border:1px solid #b9b2a2; padding:22px; font-family: Georgia, "Times New Roman", serif; font-size:14px; line-height:1.5; }
+  .label h3 { margin:0 0 6px; font-size:18px; }
+  .phone { width:360px; height:700px; border:10px solid #1d1d1f; border-radius:36px; background:#fff; overflow:hidden; position:relative; }
+  .guide { background:#2a2f36; color:#e8edf2; height:100%; padding:30px 24px; text-align:center; }
+  .screen { background:#c9d4c1; color:#1f2a1a; font-family: "Courier New", monospace; font-size:22px; padding:16px; border-radius:4px; margin-bottom:24px; }
+  /* unslop-waive LAY-4 · a phone keypad is three columns of keys by definition · this is the audio-guide device the brief replaces */
+  .keys { display:grid; grid-template-columns: repeat(3,1fr); gap:12px; }
+  .keys span { background:#3b424b; border-radius:6px; padding:16px 0; font-size:22px; }
+  .lens { padding:16px; font-size:13px; line-height:1.45; }
+  .photo { height:220px; background:#8a7a66; color:#f3eee6; display:flex; align-items:center; justify-content:center; border-radius:6px; margin-bottom:12px; }
+  .lens h4 { margin:0 0 6px; font-size:15px; }
+  .res { border-top:1px solid #e3e6ea; padding:8px 0; }
+  .res b { color:#1f5fa8; font-weight:normal; }
+</style></head>
+<body>
+<div class="wrap">
+  <div>
+    <p class="cap"><b>1. Табличка у экспоната</b>Один текст для всех: школьника, туриста и искусствоведа. Только на языке музея.</p>
+    <div class="label">
+      <h3>Кувшин с рельефным орнаментом</h3>
+      <p style="margin:0 0 10px">Керамика, ангоб, полива. Мастерская предположительно северной группы, конец XVII века. Инв. № К-1184.</p>
+      <p style="margin:0">Орнамент выполнен в технике штампа и процарапывания. Аналогичные сосуды известны по раскопкам в нижнем течении реки. Поступил в 1962 году из частного собрания.</p>
+    </div>
+  </div>
+  <div>
+    <p class="cap"><b>2. Аудиогид музея</b>Ищешь номер на табличке, набираешь, слушаешь запись на 3 минуты. Записи есть не для всех экспонатов.</p>
+    <div class="phone"><div class="guide">
+      <div class="screen">ВВЕДИТЕ НОМЕР<br>_ _ _</div>
+      <div class="keys"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>◀</span><span>0</span><span>▶</span></div>
+      <p style="font-size:13px;color:#b9c4cf;margin-top:20px">Номер 1184 не найден</p>
+    </div></div>
+  </div>
+  <div>
+    <p class="cap"><b>3. Поиск по фото в телефоне</b>Находит похожие картинки и ссылки. Чтобы узнать историю, нужно читать статьи, стоя в зале.</p>
+    <div class="phone"><div class="lens">
+      <div class="photo">фото экспоната</div>
+      <h4>Похожие изображения</h4>
+      <div class="res"><b>Глиняный кувшин, купить</b><br>Интернет-магазин посуды</div>
+      <div class="res"><b>Керамика XVII века</b><br>Статья в энциклопедии, 4 200 слов</div>
+      <div class="res"><b>Кувшин с орнаментом</b><br>Каталог аукциона</div>
+      <div class="res"><b>Ещё результаты</b></div>
+    </div></div>
+  </div>
+</div>
+<div style="position:fixed;right:12px;bottom:10px;font-size:12px;color:#5c6670;background:#fff;border:1px solid #c8ced5;padding:3px 8px;border-radius:3px">Учебный макет, данные вымышлены</div>
+</body></html>
