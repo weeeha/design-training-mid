@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="shot-height" content="1500">
+<title>Налоговик, текущая веб-форма</title>
+<link rel="stylesheet" href="legacy.css">
+<style>
+  .form { width: 720px; }
+  .form .input { width: 100%; }
+  .grid4 { display:grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+  .side { position:absolute; left: 780px; top: 120px; width: 300px; }
+</style></head>
+<body>
+<div class="top"><span class="logo">Налоговик</span><nav><span>Клиенты</span><span class="on">Отчётность</span><span>Платежи</span><span>Документы</span></nav><span class="right">Бухгалтер: Ирина Ковалёва</span></div>
+<div class="page" style="position:relative">
+  <h1>Декларация НД-3 за 2025 год</h1>
+  <div class="err" style="width:720px;margin-bottom:14px">Форма содержит ошибки. Исправьте их и отправьте снова.</div>
+  <div class="panel form">
+    <div class="field"><label>Идентификационный номер <span class="req">*</span></label><div class="input">7734 0012 9981</div></div>
+    <div class="field"><label>ФИО / наименование <span class="req">*</span></label><div class="input">Мельник Олег Викторович</div></div>
+    <div class="field"><label>Адрес регистрации <span class="req">*</span></label><div class="input"></div></div>
+    <div class="field"><label>Код инспекции <span class="req">*</span></label><div class="input"></div></div>
+    <div class="field"><label>Телефон <span class="req">*</span></label><div class="input"></div></div>
+    <div class="field"><label>Тип плательщика <span class="req">*</span></label><div class="input">Индивидуальный предприниматель ▾</div></div>
+    <div class="field"><label>Объект налогообложения <span class="req">*</span></label><div class="input">Доходы (6%) ▾</div></div>
+    <div class="field"><label>Код вида деятельности <span class="req">*</span></label><div class="input"></div></div>
+    <div class="field"><label>Среднесписочная численность <span class="req">*</span></label><div class="input"></div></div>
+    <div class="field"><label>Стр. 310 Сумма доходов (I кв / полугодие / 9 мес / год) <span class="req">*</span></label>
+      <div class="grid4"><div class="input">412 000</div><div class="input">880 500</div><div class="input"></div><div class="input"></div></div></div>
+    <div class="field"><label>Стр. 320 Налоговая база <span class="req">*</span></label>
+      <div class="grid4"><div class="input"></div><div class="input"></div><div class="input"></div><div class="input"></div></div></div>
+    <div class="field"><label>Стр. 330 Исчисленный налог <span class="req">*</span></label>
+      <div class="grid4"><div class="input"></div><div class="input"></div><div class="input"></div><div class="input"></div></div></div>
+    <div class="field"><label>Стр. 340 Авансовые платежи <span class="req">*</span></label>
+      <div class="grid4"><div class="input"></div><div class="input"></div><div class="input"></div><div class="input"></div></div></div>
+    <div class="field"><label>Стр. 410 Сумма расходов <span class="req">*</span></label>
+      <div class="grid4"><div class="input"></div><div class="input"></div><div class="input"></div><div class="input"></div></div></div>
+    <div class="field"><label>Стр. 420 Убыток прошлых лет <span class="req">*</span></label>
+      <div class="grid4"><div class="input"></div><div class="input"></div><div class="input"></div><div class="input"></div></div></div>
+    <div class="field"><label>Взносы за себя <span class="req">*</span></label><div class="input"></div></div>
+    <div class="field"><label>Взносы за работников <span class="req">*</span></label><div class="input"></div></div>
+    <div class="field"><label>Итого налог к уплате <span class="req">*</span></label><div class="input"></div></div>
+    <div class="field"><label>Подписант <span class="req">*</span></label><div class="input">Выберите ▾</div></div>
+    <div class="field"><label>Доверенность (если представитель)</label><div class="input">Файл не выбран</div></div>
+    <div style="margin-top:14px"><span class="btn primary">Отправить в инспекцию</span> &nbsp; <span class="btn">Очистить форму</span></div>
+  </div>
+  <div class="side panel small muted">Подсказка: заполните все поля в соответствии с Порядком налоговой отчётности. Неверно заполненная декларация не принимается.</div>
+</div>
+<div class="training">Учебный макет, данные вымышлены</div>
+</body></html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="shot-height" content="740">
+<title>Грузовой агент, текущий дашборд диспетчера</title>
+<link rel="stylesheet" href="legacy.css">
+<style>
+  /* unslop-waive LAY-14 · this is the as-is screen the trainee redesigns · the default dashboard shell is the flaw under study, named in HINTS.md */
+  /* unslop-waive LAY-5 · same as-is screen · identical stat cards are part of the problem the brief asks to fix */
+  .stats { display:grid; grid-template-columns: repeat(4, 1fr); gap:12px; margin-bottom:16px; }
+  .stat { background:#fff; border:1px solid #c8ced5; border-radius:3px; padding:12px; }
+  .stat b { display:block; font-size:20px; }
+  .grid { display:grid; grid-template-columns: repeat(4, 1fr); gap:12px; }
+  .call { background:#fff; border:1px solid #c8ced5; border-radius:3px; padding:10px; font-size:12px; }
+  .call b { font-size:13px; }
+  .bell { margin-left:16px; }
+</style></head>
+<body>
+<div class="top"><span class="logo">Грузовой агент</span><nav><span class="on">Дашборд</span><span>Грузы</span><span>Перевозчики</span><span>Отчёты</span></nav><span class="right">Уведомления (47) <span class="bell">Диспетчер: Артём Белов</span></span></div>
+<div class="page">
+  <h1>Дашборд</h1>
+  <div class="stats">
+    <div class="stat"><span class="muted">Звонков сегодня</span><b>312</b></div>
+    <div class="stat"><span class="muted">Успешных</span><b>71%</b></div>
+    <div class="stat"><span class="muted">Средняя ставка</span><b>2,41 $/миля</b></div>
+    <div class="stat"><span class="muted">Грузов без перевозчика</span><b>18</b></div>
+  </div>
+  <h2>Активные звонки агентов (24)</h2>
+  <div class="grid">
+    <div class="call"><b>Груз #48213</b><br>Даллас → Мемфис<br><span class="chip">Переговоры</span><br>Агент: ставка 2,10 $/миля</div>
+    <div class="call"><b>Груз #48190</b><br>Хьюстон → Атланта<br><span class="chip">Переговоры</span><br>Перевозчик просит 3,40 $/миля, лимит 2,80</div>
+    <div class="call"><b>Груз #48201</b><br>Феникс → Денвер<br><span class="chip">Звонок</span><br>Агент: ждёт ответа</div>
+    <div class="call"><b>Груз #48177</b><br>Чикаго → Детройт<br><span class="chip">Check-call</span><br>Водитель на месте</div>
+    <div class="call"><b>Груз #48222</b><br>Остин → Тулса<br><span class="chip">Переговоры</span><br>Агент: ставка согласована</div>
+    <div class="call"><b>Груз #48155</b><br>Мемфис → Нашвилл<br><span class="chip">Check-call</span><br>Опоздание 3 ч, окно выгрузки 14:00</div>
+    <div class="call"><b>Груз #48230</b><br>Даллас → Литл-Рок<br><span class="chip">Звонок</span><br>Нет ответа, попытка 2</div>
+    <div class="call"><b>Груз #48199</b><br>Канзас-Сити → Омаха<br><span class="chip">Переговоры</span><br>Перевозчик: «соедините с человеком»</div>
+    <div class="call"><b>Груз #48204</b><br>Сан-Антонио → Ларедо<br><span class="chip">Check-call</span><br>В пути, по графику</div>
+    <div class="call"><b>Груз #48211</b><br>Тампа → Орландо<br><span class="chip">Звонок</span><br>Агент: ждёт ответа</div>
+    <div class="call"><b>Груз #48186</b><br>Атланта → Шарлотт<br><span class="chip">Переговоры</span><br>Агент: ставка 2,35 $/миля</div>
+    <div class="call"><b>Груз #48219</b><br>Денвер → Солт-Лейк-Сити<br><span class="chip">Check-call</span><br>В пути, по графику</div>
+    <div class="call"><b>Груз #48226</b><br>Луисвилл → Цинциннати<br><span class="chip">Звонок</span><br>Агент: ждёт ответа</div>
+    <div class="call"><b>Груз #48160</b><br>Эль-Пасо → Альбукерке<br><span class="chip">Check-call</span><br>Нет связи с водителем 2 ч</div>
+    <div class="call"><b>Груз #48233</b><br>Даллас → Шривпорт<br><span class="chip">Переговоры</span><br>Агент: ставка 2,05 $/миля</div>
+    <div class="call"><b>Груз #48195</b><br>Новый Орлеан → Батон-Руж<br><span class="chip">Check-call</span><br>Выгружен</div>
+  </div>
+  <p class="muted small" style="margin-top:10px">Показано 16 из 24. Обновление каждые 30 секунд.</p>
+</div>
+<div class="training">Учебный макет, данные вымышлены</div>
+</body></html>

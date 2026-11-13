@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="shot-height" content="900">
+<title>Лесобаза, покупатель: карточка товара</title>
+<link rel="stylesheet" href="legacy.css">
+<style>
+  .wrap { display:grid; grid-template-columns: 480px 1fr; gap: 28px; }
+  .photo { height: 360px; background:#c7b79c; border:1px solid #a8987c; display:flex; align-items:center; justify-content:center; color:#4a3f2c; }
+  .sel { display:grid; grid-template-columns: 1fr 1fr; gap: 10px; width: 520px; }
+  .sel .input { width:100%; }
+  .price { font-size:20px; font-weight:bold; margin: 16px 0 4px; }
+</style></head>
+<body>
+<div class="top"><span class="logo">Северный брус</span><nav><span>Каталог</span><span>Доставка</span><span>Контакты</span></nav><span class="right">Корзина (0)</span></div>
+<div class="page">
+  <p class="small muted" style="margin:0 0 10px">Каталог / Пиломатериалы / Доска обрезная</p>
+  <div class="wrap">
+    <div class="photo">Фото товара</div>
+    <div>
+      <h1>Доска обрезная</h1>
+      <p class="muted">Камерной сушки, под заказ антисептическая обработка.</p>
+      <div class="sel">
+        <div class="field"><label>Порода</label><div class="input">Сосна ▾</div></div>
+        <div class="field"><label>Сечение</label><div class="input">25×100 ▾</div></div>
+        <div class="field"><label>Длина</label><div class="input">4 м ▾</div></div>
+        <div class="field"><label>Сорт</label><div class="input">1 ▾</div></div>
+        <div class="field"><label>Влажность</label><div class="input">12% ▾</div></div>
+        <div class="field"><label>Количество, м³</label><div class="input">10</div></div>
+      </div>
+      <div class="err" style="width:520px;margin-top:6px">Выбранная вариация отсутствует на складе.</div>
+      <div class="price">от 17 200 руб./м³</div>
+      <p class="small muted" style="margin:0 0 14px">Цена зависит от выбранных параметров. Оптовые скидки по запросу.</p>
+      <span class="btn primary">В корзину</span> &nbsp; <span class="btn">Запросить счёт</span>
+      <h2>Характеристики</h2>
+      <table style="width:520px"><tr><th>Порода</th><td>Сосна, ель, лиственница</td></tr><tr><th>Сечение</th><td>25×100, 50×150, 28×140</td></tr><tr><th>Длина</th><td>4 м, 6 м</td></tr><tr><th>Сорт</th><td>1, 2, Экстра</td></tr></table>
+    </div>
+  </div>
+</div>
+<div class="training">Учебный макет, данные вымышлены</div>
+</body></html>

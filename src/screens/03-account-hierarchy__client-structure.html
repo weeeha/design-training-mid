@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="shot-height" content="860">
+<title>Структура клиента «Автомир» со слов отдела продаж</title>
+<link rel="stylesheet" href="legacy.css">
+<style>
+  body { background:#fff; }
+  .board { padding: 30px 40px; }
+  .lvl { display:flex; justify-content:center; gap:24px; margin-bottom:34px; }
+  .n { border:1px solid #6d7782; border-radius:3px; padding:8px 12px; background:#f7f8f9; text-align:center; min-width:150px; }
+  .n b { display:block; font-size:14px; }
+  .n.pay { border:2px solid #1f5fa8; }
+  .group { border:1px dashed #9aa4ae; border-radius:3px; padding:12px; }
+  .group .t { font-size:12px; color:#5c6670; margin-bottom:8px; }
+  /* unslop-waive LAY-4 · three columns are the client's three regions (Центр, Север, Юг) · the count comes from the scenario data, regions differ in size */
+  .cols { display:grid; grid-template-columns: repeat(3, 1fr); gap:20px; }
+  .stack { display:flex; flex-direction:column; gap:8px; }
+  .legend { margin-top:24px; display:grid; grid-template-columns: 1fr 1fr; gap:24px; }
+</style></head>
+<body><div class="board">
+  <h1>Сеть «Автомир»: как устроен клиент</h1>
+  <p class="muted" style="margin:0 0 24px">Схема со слов менеджера по продажам, записана после звонка с финансовым директором клиента. Синяя рамка: узел сам платит за проверки.</p>
+  <div class="lvl"><div class="n pay"><b>Автомир Холдинг</b>головная компания</div></div>
+  <div class="cols">
+    <div class="group"><div class="t">Регион «Центр», платит холдинг</div><div class="stack">
+      <div class="n"><b>Салон на Ленина</b>3 кассы</div><div class="n"><b>Салон на Садовой</b>4 кассы</div><div class="n"><b>Салон на Мира</b>открытие в январе</div></div></div>
+    <div class="group"><div class="t">Регион «Север», платит холдинг</div><div class="stack">
+      <div class="n"><b>Салон на Мурманской</b>2 кассы</div><div class="n"><b>Салон на Портовой</b>2 кассы</div></div></div>
+    <div class="group"><div class="t">Регион «Юг», франшиза, платит сама</div><div class="stack">
+      <div class="n pay"><b>Автомир Юг</b>юрлицо франчайзи</div><div class="n"><b>Салон на Краснодарской</b>2 кассы</div><div class="n"><b>Салон в Сочи</b>2 кассы</div><div class="n"><b>Салон на Приморской</b>закрыт в сентябре</div></div></div>
+  </div>
+  <div class="legend">
+    <div class="panel"><b>Кто работает в системе</b><br>Владелец холдинга: смотрит отчёты по всей сети.<br>Финансовый отдел холдинга: счета Центра и Севера.<br>Директор франшизы «Юг»: свои салоны и свои счета.<br>Управляющий салоном: проверки и сотрудники своего салона.<br>Кассир: только проверка документов на своей кассе.</div>
+    <div class="panel"><b>Что болит у клиента</b><br>Получают 3 счёта и не понимают, за какие салоны каждый.<br>Закрытый салон на Приморской продолжают оплачивать.<br>Кассир случайно увидел отчёты другого салона.<br>Отдельная сделка «Trade-in» висит в пробном тарифе без плательщика.</div>
+  </div>
+</div>
+<div class="training">Учебный макет, данные вымышлены</div>
+</body></html>
