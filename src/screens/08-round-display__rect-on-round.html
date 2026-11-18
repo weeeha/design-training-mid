@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="shot-height" content="820">
+<title>Прямоугольный виджет на круглом экране</title>
+<style>
+  body { margin:0; background:#e9ecef; font-family: Arial, Helvetica, sans-serif; color:#222a33; }
+  .wrap { display:grid; grid-template-columns: 1fr 1fr; gap: 60px; padding: 40px 80px; }
+  .cap { font-size:14px; margin: 0 0 14px; }
+  .cap b { display:block; font-size:16px; margin-bottom:4px; }
+  .frame { width:560px; height:560px; position:relative; }
+  .round { border-radius:50%; overflow:hidden; background:#000; }
+  .dash { position:absolute; inset:0; padding:22px; background:#1d2733; color:#e8edf2; display:grid; grid-template-rows: auto 1fr auto; }
+  .top { display:flex; justify-content:space-between; font-size:15px; color:#b9c4cf; }
+  .now { display:flex; align-items:center; gap:24px; }
+  .t { font-size:96px; line-height:1; }
+  .desc { font-size:18px; line-height:1.5; }
+  .days { display:grid; grid-template-columns: repeat(5,1fr); gap:6px; text-align:center; font-size:14px; }
+  .days div { background:#26323f; border-radius:3px; padding:8px 0; }
+  .ring { position:absolute; inset:0; border:2px dashed #c8362b; border-radius:50%; pointer-events:none; }
+  .note { font-size:13px; color:#5c6670; margin-top:14px; width:560px; line-height:1.45; }
+</style></head>
+<body>
+<div class="wrap">
+  <div>
+    <p class="cap"><b>Так виджет задуман</b>Квадрат 1080×1080. Красный пунктир: граница круглого экрана.</p>
+    <div class="frame">
+      <div class="dash">
+        <div class="top"><span>Монреаль</span><span>14:32</span></div>
+        <div class="now"><span class="t">−4°</span><span class="desc">Облачно, снег к вечеру<br>Ощущается как −9°<br>Ветер 18 км/ч</span></div>
+        <div class="days"><div>Пт<br>−2°</div><div>Сб<br>−6°</div><div>Вс<br>−8°</div><div>Пн<br>−3°</div><div>Вт<br>1°</div></div>
+      </div>
+      <div class="ring"></div>
+    </div>
+    <p class="note">Город, время и прогноз на пять дней стоят в углах и по краям, там, где у круга ничего нет.</p>
+  </div>
+  <div>
+    <p class="cap"><b>Так его видит человек</b>Тот же виджет на круглом экране 1080×1080.</p>
+    <div class="frame round">
+      <div class="dash">
+        <div class="top"><span>Монреаль</span><span>14:32</span></div>
+        <div class="now"><span class="t">−4°</span><span class="desc">Облачно, снег к вечеру<br>Ощущается как −9°<br>Ветер 18 км/ч</span></div>
+        <div class="days"><div>Пт<br>−2°</div><div>Сб<br>−6°</div><div>Вс<br>−8°</div><div>Пн<br>−3°</div><div>Вт<br>1°</div></div>
+      </div>
+    </div>
+    <p class="note">Круг теряет около 22% площади квадрата (1 − π/4). Обрезаны название города, время, крайние дни прогноза.</p>
+  </div>
+</div>
+</body></html>

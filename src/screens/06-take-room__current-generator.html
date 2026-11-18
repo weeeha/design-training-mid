@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="shot-height" content="760">
+<title>Типичный генератор музыки: 4 варианта</title>
+<link rel="stylesheet" href="legacy.css">
+<style>
+  .prompt { width: 900px; }
+  .take { width: 900px; display:grid; grid-template-columns: 40px 110px 1fr 90px 250px; gap: 14px; align-items:center; background:#fff; border:1px solid #c8ced5; border-radius:3px; padding:12px 14px; margin-bottom:10px; }
+  .play { width:36px; height:36px; border:1px solid #9aa4ae; border-radius:50%; display:flex; align-items:center; justify-content:center; background:#f4f5f7; }
+  .bar { height:6px; background:#dfe3e7; border-radius:3px; position:relative; }
+  .bar i { position:absolute; left:0; top:0; bottom:0; background:#1f5fa8; border-radius:3px; }
+  .acts { display:flex; gap:8px; justify-content:flex-end; }
+</style></head>
+<body>
+<div class="top"><span class="logo">Мелодия</span><nav><span class="on">Создать</span><span>Библиотека</span><span>Тарифы</span></nav><span class="right">Осталось генераций: 12</span></div>
+<div class="page">
+  <h1>Новый трек</h1>
+  <div class="panel prompt" style="margin-bottom:16px">
+    <div class="field"><label>Описание</label><div class="input" style="width:100%">Лоу-фай хип-хоп, 92 BPM, тёплый Rhodes, мягкий бас, для фона в кафе</div></div>
+    <span class="btn primary">Сгенерировать ещё 4</span>
+  </div>
+  <h2>Результаты: 4 варианта</h2>
+  <div class="take"><span class="play">▶</span><b>Вариант 1</b><div class="bar"><i style="width:62%"></i></div><span class="muted">1:33 / 2:30</span><span class="acts"><span class="btn">В избранное</span><span class="btn">Скачать</span></span></div>
+  <div class="take"><span class="play">▶</span><b>Вариант 2</b><div class="bar"><i style="width:0%"></i></div><span class="muted">0:00 / 2:24</span><span class="acts"><span class="btn">В избранное</span><span class="btn">Скачать</span></span></div>
+  <div class="take"><span class="play">▶</span><b>Вариант 3</b><div class="bar"><i style="width:0%"></i></div><span class="muted">0:00 / 2:41</span><span class="acts"><span class="btn">В избранное</span><span class="btn">Скачать</span></span></div>
+  <div class="take"><span class="play">▶</span><b>Вариант 4</b><div class="bar"><i style="width:0%"></i></div><span class="muted">0:00 / 2:18</span><span class="acts"><span class="btn">В избранное</span><span class="btn">Скачать</span></span></div>
+  <p class="small muted" style="width:900px">При запуске другого варианта текущий останавливается. Каждый вариант начинается с начала.</p>
+</div>
+<div class="training">Учебный макет, данные вымышлены</div>
+</body></html>
